@@ -10,7 +10,7 @@ public class TopDownCharacterController : MonoBehaviour
     // event: 외부에서 호출 못하게 막는다
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
-    public event Action OnAttackEvent;
+    public event Action<AttackSO> OnAttackEvent;
 
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
@@ -38,7 +38,7 @@ public class TopDownCharacterController : MonoBehaviour
         if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStates.attackSO.delay)
         {
             _timeSinceLastAttack = 0;
-            CallAttackEvent();
+            CallAttackEvent(Stats.CurrentStates.attackSO);
         }
 
     }
@@ -52,8 +52,8 @@ public class TopDownCharacterController : MonoBehaviour
     {
         OnLookEvent?.Invoke(direction);
     }
-    public void CallAttackEvent()   // 원거리 공격
+    public void CallAttackEvent(AttackSO attackSO)  // 원거리 공격
     {
-        OnAttackEvent?.Invoke();
+        OnAttackEvent?.Invoke(attackSO);
     }
 }
