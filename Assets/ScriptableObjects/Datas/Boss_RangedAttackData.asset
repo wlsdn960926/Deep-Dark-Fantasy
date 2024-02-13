@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2501dd801d86c924197390e54af1cd6a, type: 3}
+  m_Name: Boss_RangedAttackData
+  m_EditorClassIdentifier: 
+  size: 1
+  delay: 0.15
+  power: 20
+  speed: 3
+  target:
+    serializedVersion: 2
+    m_Bits: 64
+  isKnockBack: 1
+  knockbackPower: 4
+  knockbackTime: 0.1
+  bulletNameTag: //TODO
+  duration: 5
+  spread: 4
+  numberofProjectilesPerShot: 1
+  multipleProjectilesAngel: 7
+  projectileColor: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
