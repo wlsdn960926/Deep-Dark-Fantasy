@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f037d10a4e6ffc419fa217e2135cf12, type: 3}
+  m_Name: Enemy2_DefaultAttackData
+  m_EditorClassIdentifier: 
+  size: 1
+  delay: 0.15
+  power: 10
+  speed: 3.5
+  target:
+    serializedVersion: 2
+    m_Bits: 64
+  isKnockBack: 0
+  knockbackPower: 0
+  knockbackTime: 0
