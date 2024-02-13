@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
 {
-    private CharacterController _controller;
+    private TopDownCharacterController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        _controller = GetComponent<CharacterController>();
+        _controller = GetComponent<TopDownCharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 

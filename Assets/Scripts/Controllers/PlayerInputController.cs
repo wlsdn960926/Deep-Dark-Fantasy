@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class PlayerInputController : CharacterController
+public class PlayerInputController : TopDownCharacterController
 {
     private Camera _camera;
     private void Awake()
