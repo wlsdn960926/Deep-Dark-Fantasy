@@ -21,4 +21,8 @@ public class EntertheDungeon : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+    public void ExitGame()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
 }
