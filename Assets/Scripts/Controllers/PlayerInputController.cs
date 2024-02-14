@@ -28,7 +28,7 @@ public class PlayerInputController : TopDownCharacterController
         newAim = (worldPos - (Vector2)transform.position).normalized;
 
         if (newAim.magnitude >= .9f)
-        // Vector °ªÀ» ½Ç¼ö·Î º¯È¯
+        // Vector ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¼ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
         {
             CallLookEvent(newAim);
         }
@@ -37,5 +37,10 @@ public class PlayerInputController : TopDownCharacterController
     public void OnFire(InputValue value)
     {
         IsAttacking = value.isPressed;
+    }
+
+    public void OnInteract(InputValue value)
+    {
+
     }
 }
