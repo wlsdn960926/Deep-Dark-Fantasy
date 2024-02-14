@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss_RangedAttackData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 0.15
+  delay: 0.5
   power: 20
   speed: 3
   target:
@@ -22,9 +22,9 @@ MonoBehaviour:
   isKnockBack: 1
   knockbackPower: 4
   knockbackTime: 0.1
-  bulletNameTag: //TODO
+  bulletNameTag: Fire
   duration: 5
   spread: 4
-  numberofProjectilesPerShot: 1
-  multipleProjectilesAngel: 7
-  projectileColor: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
+  numberofProjectilesPerShot: 2
+  multipleProjectilesAngel: 20
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}

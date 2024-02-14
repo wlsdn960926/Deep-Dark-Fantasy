@@ -13,7 +13,7 @@ public class AttackSO : ScriptableObject
     public LayerMask target;
 
     [Header("Knock Back Info")]
-    public bool isKnockBack;
+    public bool isOnKnockBack;
     public float knockbackPower;
     public float knockbackTime;
 
