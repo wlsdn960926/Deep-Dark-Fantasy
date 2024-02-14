@@ -74,5 +74,6 @@ public class HealthSystem : MonoBehaviour
     private void CallDeath()
     {
         OnDeath?.Invoke();
+        GameManager.instance.GetExp();
     }
 }
