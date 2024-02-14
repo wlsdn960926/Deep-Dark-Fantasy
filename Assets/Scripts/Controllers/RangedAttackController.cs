@@ -43,7 +43,7 @@ public class RangedAttackController : MonoBehaviour
         _rigidbody.velocity = _direction * _attackData.speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)  //¸Ê ¿Ï¼ºµÇ¸é Àû¿ë¿¹Á¤
+    private void OnTriggerEnter2D(Collider2D collision)  //ï¿½ï¿½ ï¿½Ï¼ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ë¿¹ï¿½ï¿½
     {
         if (levelCollisionLayer.value == (levelCollisionLayer.value | (1 << collision.gameObject.layer)))
         {

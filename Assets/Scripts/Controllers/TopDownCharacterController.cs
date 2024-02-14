@@ -7,10 +7,11 @@ using UnityEngine;
 
 public class TopDownCharacterController : MonoBehaviour
 {
-    // event: ¿ÜºÎ¿¡¼­ È£Ãâ ¸øÇÏ°Ô ¸·´Â´Ù
+    // event: ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Â´ï¿½
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action<AttackSO> OnAttackEvent;
+    
 
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
@@ -27,7 +28,7 @@ public class TopDownCharacterController : MonoBehaviour
         HandleAttackDelay();
     }
 
-    private void HandleAttackDelay() //¹«±â µô·¹ÀÌ
+    private void HandleAttackDelay() //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         if (Stats.CurrentStates.attackSO == null)
             return;
@@ -45,14 +46,14 @@ public class TopDownCharacterController : MonoBehaviour
 
     public void CallMoveEvent(Vector2 direction)
     {
-        OnMoveEvent?.Invoke(direction);  // ?. ¾ÕÀÌ nullÀÌ ¾Æ´Ò ¶§ µ¿ÀÛ
+        OnMoveEvent?.Invoke(direction);  // ?. ï¿½ï¿½ï¿½ï¿½ nullï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 
     public void CallLookEvent(Vector2 direction)
     {
         OnLookEvent?.Invoke(direction);
     }
-    public void CallAttackEvent(AttackSO attackSO)  // ¿ø°Å¸® °ø°Ý
+    public void CallAttackEvent(AttackSO attackSO)  // ï¿½ï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
         OnAttackEvent?.Invoke(attackSO);
     }
