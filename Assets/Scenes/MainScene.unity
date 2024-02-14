@@ -402,12 +402,12 @@ GameObject:
   m_Component:
   - component: {fileID: 667916093}
   - component: {fileID: 667916097}
+  - component: {fileID: 667916098}
   - component: {fileID: 667916096}
   - component: {fileID: 667916095}
-  - component: {fileID: 667916094}
   - component: {fileID: 667916100}
   - component: {fileID: 667916099}
-  - component: {fileID: 667916098}
+  - component: {fileID: 667916101}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -432,21 +432,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &667916094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667916092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0edc77a1ba9a54ba5e2d3bb8f45149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  followRange: 10
-  targetTag: Player
-  characterRenderer: {fileID: 8820082352224819730}
 --- !u!114 &667916095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    statsChangeType: 0
+    statsChangeType: 2
     maxHealth: 50
     speed: 3
     attackSO: {fileID: 11400000, guid: 120b36ba27129774694a49edd75a7150, type: 2}
@@ -576,8 +561,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f196e72446e53a945add063d149c5dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 10
-  shootRange: 7
+  followRange: 7
+  shootRange: 20
+--- !u!114 &667916101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667916092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e255dcfccc2ff4ba7743da292176db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpawnPosition: {fileID: 268291147}
 --- !u!1 &681022078
 GameObject:
   m_ObjectHideFlags: 0
@@ -65761,6 +65759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1631014832}
   - component: {fileID: 1631014833}
+  - component: {fileID: 1631014834}
   m_Layer: 0
   m_Name: ProjectileManager
   m_TagString: Untagged
@@ -65796,7 +65795,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 0}
-  testObj: {fileID: 5259555460627735597, guid: cadafbe57cafaa54f84566d70d917c8f, type: 3}
+--- !u!114 &1631014834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631014831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b243f13cff9ecc41bccaef23ca58118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Arrow
+    prefab: {fileID: 5259555460627735597, guid: cadafbe57cafaa54f84566d70d917c8f, type: 3}
+    size: 20
+  - tag: Fire
+    prefab: {fileID: 1810176682776032545, guid: 3535c97ec4699b44b93644ce27018797, type: 3}
+    size: 10
 --- !u!1 &1829779945
 GameObject:
   m_ObjectHideFlags: 0
