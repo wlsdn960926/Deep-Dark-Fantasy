@@ -43,11 +43,31 @@ public class RangedAttackController : MonoBehaviour
         _rigidbody.velocity = _direction * _attackData.speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)  //¸Ê ¿Ï¼ºµÇ¸é Àû¿ë¿¹Á¤
+
+
+    private void OnTriggerEnter2D(Collider2D collision)  // Â¸ÃŠ Â¾Ã†ÃÃ· Â±Â¸Â¼ÂºÂ¾ÃˆÃ‡Ã”  
+
     {
         if (levelCollisionLayer.value == (levelCollisionLayer.value | (1 << collision.gameObject.layer)))
         {
             DestroyProjectile(collision.ClosestPoint(transform.position) - _direction * .2f, fxOnDestory);
+        }
+        else if (_attackData.target.value == (_attackData.target.value | (1 << collision.gameObject.layer)))
+        {
+            HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+            if (healthSystem != null)
+            {
+                healthSystem.ChangeHealth(-_attackData.power);
+                if (_attackData.isOnKnockBack)
+                {
+                    TopDownMovement movement = collision.GetComponent<TopDownMovement>();
+                    if (movement != null)
+                    {
+                        movement.ApplyKnockback(transform, _attackData.knockbackPower, _attackData.knockbackTime);
+                    }
+                }
+            }
+            DestroyProjectile(collision.ClosestPoint(transform.position), fxOnDestory);
         }
     }
 
