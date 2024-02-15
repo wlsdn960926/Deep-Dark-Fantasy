@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownContactEnemyController : TopDownEnemyController
+public class TopDownContactPlayerController : TopDownCharacterController
 {
-    [SerializeField][Range(0f, 100f)] private float followRange;
-    [SerializeField] private string targetTag = "Player";
+    [SerializeField][Range(0f, 100f)] private float maxHealth;
+    [SerializeField] private string targetTag = "Enemy";
     private bool _isCollidingWithTarget;
 
     [SerializeField] private SpriteRenderer characterRenderer;
@@ -15,43 +15,27 @@ public class TopDownContactEnemyController : TopDownEnemyController
     private HealthSystem _collidingTargetHealthSystem;
     private TopDownMovement _collidingMovement;
 
-    protected override void Start()
+    private void Awake()
     {
-        base.Start();
         healthSystem = GetComponent<HealthSystem>();
         healthSystem.OnDamage += OnDamage;
-
     }
 
-    private void OnDamage()
+    public void FixdeUpdate()
     {
-        followRange = 100f;
-    }
-
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-
         if (_isCollidingWithTarget)
         {
             ApplyHealthChange();
         }
 
-        Vector2 direction = Vector2.zero;
-        if (DistanceToTarget() < followRange)
-        {
-            direction = DirectionToTarget();
-        }
-
-        CallMoveEvent(direction);
-        Rotate(direction);
     }
 
-    private void Rotate(Vector2 direction)
+    private void OnDamage()
     {
-        float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        characterRenderer.flipX = Mathf.Abs(rotZ) > 90f;
+        maxHealth -= 1.0f;
     }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject receiver = collision.gameObject;
@@ -69,15 +53,7 @@ public class TopDownContactEnemyController : TopDownEnemyController
 
         _collidingMovement = receiver.GetComponent<TopDownMovement>();
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!collision.CompareTag(targetTag))
-        {
-            return;
-        }
-
-        _isCollidingWithTarget = false;
-    }
+   
 
     private void ApplyHealthChange()
     {
@@ -90,3 +66,4 @@ public class TopDownContactEnemyController : TopDownEnemyController
     }
 
 }
+

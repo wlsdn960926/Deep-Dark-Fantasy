@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+
     public Transform Player { get; private set; }
     [SerializeField] private string playerTag = "Player";
     [Header("# Player Info")]
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
+       
+
     }
 
     public void GetExp()

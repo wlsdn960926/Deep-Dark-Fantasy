@@ -23,7 +23,6 @@ public class CharacterStatsHandler : MonoBehaviour
         }
 
         CurrentStates = new CharacterStats { attackSO = attackSO };
-        // TODO
         CurrentStates.statsChangeType = baseStats.statsChangeType;
         CurrentStates.maxHealth = baseStats.maxHealth;
         CurrentStates.speed = baseStats.speed;
