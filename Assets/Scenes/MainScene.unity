@@ -1008,13 +1008,14 @@ GameObject:
   - component: {fileID: 568435195}
   - component: {fileID: 568435196}
   - component: {fileID: 568435197}
+  - component: {fileID: 568435198}
   m_Layer: 7
   m_Name: Enemy_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &568435190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,7 +1133,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1173,6 +1174,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+--- !u!114 &568435198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568435189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ca0ec2d961ba849985c68181fa7c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619440844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1308,7 @@ GameObject:
   - component: {fileID: 667916101}
   - component: {fileID: 667916102}
   - component: {fileID: 667916103}
+  - component: {fileID: 667916104}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Untagged
@@ -1404,7 +1418,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1487,6 +1501,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+--- !u!114 &667916104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667916092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ca0ec2d961ba849985c68181fa7c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &681022078
 GameObject:
   m_ObjectHideFlags: 0
@@ -66332,13 +66358,14 @@ GameObject:
   - component: {fileID: 843443705}
   - component: {fileID: 843443706}
   - component: {fileID: 843443707}
+  - component: {fileID: 843443708}
   m_Layer: 7
   m_Name: Enemy_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &843443700
 Transform:
   m_ObjectHideFlags: 0
@@ -66456,7 +66483,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -66497,6 +66524,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+--- !u!114 &843443708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843443699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ca0ec2d961ba849985c68181fa7c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &877319338
 GameObject:
   m_ObjectHideFlags: 0
@@ -67769,6 +67808,7 @@ GameObject:
   - component: {fileID: 1894466481}
   - component: {fileID: 1894466480}
   - component: {fileID: 1894466479}
+  - component: {fileID: 1894466490}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -67828,7 +67868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 0
-    maxHealth: 10
+    maxHealth: 100
     speed: 5
     attackSO: {fileID: 11400000, guid: 5f01c530a7e5adb4a859c89a54d0a12b, type: 2}
   statsModifiers: []
@@ -67981,7 +68021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894466478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.81, y: 3.79, z: 0}
+  m_LocalPosition: {x: 3.84, y: 5.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67990,6 +68030,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894466490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894466478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e871822e9f378409fd5d734ec54eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndPanel: {fileID: 1088499729}
 --- !u!1 &1951894309
 GameObject:
   m_ObjectHideFlags: 0
