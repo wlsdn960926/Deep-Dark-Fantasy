@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915decc115fed85429aa725be01440e9, type: 3}
+  m_Name: Room_MediumRoom_Catacombs_1
+  m_EditorClassIdentifier: 
+  guid: c6959673a5823eb4385cf500fcd2e648
+  prefab: {fileID: 7906527949154759260, guid: 730c4707be1399b47b593132c022fbe7, type: 3}
+  previousPrefab: {fileID: 7906527949154759260, guid: 730c4707be1399b47b593132c022fbe7, type: 3}
+  roomNodeType: {fileID: 11400000, guid: e8882793a33e0cf4da90a6195f948600, type: 2}
+  lowerBounds: {x: 2, y: -1}
+  upperBounds: {x: 37, y: 3}
+  doorwayList:
+  - position: {x: 23, y: 33}
+    orientation: 0
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 19, y: 34}
+    doorwayCopyTileWidth: 5
+    doorwayCopyTileHeight: 7
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 37, y: 16}
+    orientation: 1
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 33, y: 18}
+    doorwayCopyTileWidth: 4
+    doorwayCopyTileHeight: 5
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 15, y: -1}
+    orientation: 2
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 12, y: 1}
+    doorwayCopyTileWidth: 5
+    doorwayCopyTileHeight: 3
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 2, y: 12}
+    orientation: 3
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 1, y: 14}
+    doorwayCopyTileWidth: 4
+    doorwayCopyTileHeight: 2
+    isConnected: 0
+    isUnavailable: 0
+  spawnPositionArray:
+  - {x: 28, y: 9}

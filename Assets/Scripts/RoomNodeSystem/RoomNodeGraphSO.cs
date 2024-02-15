@@ -30,6 +30,21 @@ public class RoomNodeGraphSO : ScriptableObject
     }
 
     /// <summary>
+    /// Get room node by roomNodeType
+    /// </summary>
+    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
+	{
+        foreach (RoomNodeSO node in roomNodeList)
+		{
+            if (node.roomNodeType == roomNodeType)
+			{
+                return node;
+			}
+		}
+        return null;
+	}
+
+    /// <summary>
     /// 룸 노드 ID로부터 룸 노드를 가져오기
     /// </summary>
     public RoomNodeSO GetRoomNode(string roomNodeID)
@@ -41,11 +56,17 @@ public class RoomNodeGraphSO : ScriptableObject
         return null;
     }
 
+    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)
+	{
+        foreach (string childNodeID in parentRoomNode.childRoomNodeIDList)
+		{
+            yield return GetRoomNode(childNodeID);
+		}
+	}
 
 
     #region Editor Code
 
-    // The following code should only run in the Unity Editor
 #if UNITY_EDITOR
 
     [HideInInspector] public RoomNodeSO roomNodeToDrawLineFrom = null;
