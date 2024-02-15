@@ -7,7 +7,7 @@ public enum ItemType
     Melee,
     Range,
     Consumable,
-    Accesory
+    Artifact
 }
 
 public enum ConsumableType
