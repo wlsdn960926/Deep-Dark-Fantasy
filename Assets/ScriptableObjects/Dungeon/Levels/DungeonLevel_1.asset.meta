@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/ScriptableObjects/Dungeon/Levels/DungeonLevel_1.asset.meta
-guid: e7a170f6170cb1f41894c9a4726dc448
-========
-guid: 606c048b8b9d0b64ca55aa661e923261
->>>>>>>> main:Assets/Scripts/RoomNodeSystem/RoomNodeGraph.asset.meta
+guid: de76adac839ea214fbc0d300960d08bf
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
