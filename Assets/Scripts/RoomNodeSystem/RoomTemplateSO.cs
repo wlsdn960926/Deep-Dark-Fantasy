@@ -22,7 +22,7 @@ public class RoomTemplateSO : ScriptableObject
 
     public GameObject prefab;
 
-    [HideInInspector] public GameObject previousPrefab; // this is used to regenrate the guid if the so is copied and the prefab is changed
+    [HideInInspector] public GameObject previousPrefab;
 
     [Space(10)]
 
@@ -79,9 +79,6 @@ public class RoomTemplateSO : ScriptableObject
 
     public Vector2Int[] spawnPositionArray;
 
-    /// <summary>
-    /// Returns the list of Entrances for the room template
-    /// </summary>
     public List<Doorway> GetDoorwayList()
     {
         return doorwayList;
