@@ -9,7 +9,7 @@ public class RangedAttackData : AttackSO
     public string bulletNameTag;
     public float duration;
     public float spread;
-    public int numberofProjectilesPerShot;  // ¿¬»ç ±â´É ¾µ¶§ ¼öÁ¤ÇÊ¿ä
-    public float multipleProjectilesAngel;  // °ø°Ý½Ã °¢µµ
+    public int numberofProjectilesPerShot;  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
+    public float multipleProjectilesAngel;  // ï¿½ï¿½ï¿½Ý½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public Color projectileColor;
 }
