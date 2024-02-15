@@ -15,7 +15,8 @@ MonoBehaviour:
   displayName: 
   description: 
   type: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 4afcf07594e8c2a4fa920af02c576a01, type: 3}
   canStack: 0
   maxStackAmount: 0
   consumables: []
+  projectile: {fileID: 0}
