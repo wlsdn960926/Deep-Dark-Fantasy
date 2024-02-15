@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Player_RangedAttackData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 0.15
-  power: 50
+  delay: 0.5
+  power: 5
   speed: 10
   target:
     serializedVersion: 2

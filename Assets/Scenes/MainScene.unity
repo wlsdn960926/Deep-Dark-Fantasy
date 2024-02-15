@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 20
+    maxHealth: 30
     speed: 3.5
     attackSO: {fileID: 11400000, guid: 40ed704644299ae4c9f3a7bda7ebb2ee, type: 2}
   statsModifiers: []
@@ -55528,12 +55528,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  health: 0
-  maxHealth: 100
   level: 0
-  kill: 0
   exp: 0
   nextExp: 03000000050000000a0000006400000096000000d20000001801000068010000c201000058020000
+  hpGaugeSlider: {fileID: 1330435691}
+  gameOverUI: {fileID: 1088499729}
 --- !u!4 &717022675
 Transform:
   m_ObjectHideFlags: 0
@@ -66521,7 +66520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 10
+    maxHealth: 20
     speed: 3
     attackSO: {fileID: 11400000, guid: b5562d5d5996ee443a6750d15f014fdd, type: 2}
   statsModifiers: []
@@ -67198,7 +67197,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.569
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
