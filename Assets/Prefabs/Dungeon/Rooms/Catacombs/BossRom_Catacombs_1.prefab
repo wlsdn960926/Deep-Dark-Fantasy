@@ -59675,6 +59675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3734489534731883270}
   - component: {fileID: 769484579694910121}
+  - component: {fileID: 4792064515053685539}
   m_Layer: 30
   m_Name: BossRom_Catacombs_1
   m_TagString: Untagged
@@ -59744,6 +59745,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 55, y: 62}
   m_EdgeRadius: 0
+--- !u!114 &4792064515053685539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906527949154759260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85a515c6cc82014db9ebaec04fa114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  groundTilemap: {fileID: 0}
+  decoration1Tilemap: {fileID: 0}
+  decoration2Tilemap: {fileID: 0}
+  frontTilemap: {fileID: 0}
+  collisionTilemap: {fileID: 0}
+  minimapTilemap: {fileID: 0}
+  roomColliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &8838784497053140254
 GameObject:
   m_ObjectHideFlags: 0

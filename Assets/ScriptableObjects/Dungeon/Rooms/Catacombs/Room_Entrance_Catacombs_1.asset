@@ -12,11 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915decc115fed85429aa725be01440e9, type: 3}
   m_Name: Room_Entrance_Catacombs_1
   m_EditorClassIdentifier: 
-  guid: 
-  prefab: {fileID: 0}
-  previousPrefab: {fileID: 0}
-  roomNodeType: {fileID: 0}
-  lowerBounds: {x: 0, y: 0}
-  upperBounds: {x: 0, y: 0}
-  doorwayList: []
-  spawnPositionArray: []
+  guid: 8e4b9cbe3511e7549b3dc17a05a1df6c
+  prefab: {fileID: 7906527949154759260, guid: 90e625ea7da7131488d913d5752ff1c3, type: 3}
+  previousPrefab: {fileID: 7906527949154759260, guid: 90e625ea7da7131488d913d5752ff1c3, type: 3}
+  roomNodeType: {fileID: 11400000, guid: 191511f09da383843818a0424ece8974, type: 2}
+  lowerBounds: {x: -1, y: -6}
+  upperBounds: {x: 23, y: 18}
+  doorwayList:
+  - position: {x: -2, y: 4}
+    orientation: 3
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: -3, y: 6}
+    doorwayCopyTileWidth: 4
+    doorwayCopyTileHeight: 5
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 0, y: 0}
+    orientation: 0
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 8, y: 20}
+    doorwayCopyTileWidth: 5
+    doorwayCopyTileHeight: 2
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 23, y: 4}
+    orientation: 1
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 19, y: 6}
+    doorwayCopyTileWidth: 4
+    doorwayCopyTileHeight: 5
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 11, y: -7}
+    orientation: 2
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 8, y: -4}
+    doorwayCopyTileWidth: 5
+    doorwayCopyTileHeight: 4
+    isConnected: 0
+    isUnavailable: 0
+  spawnPositionArray:
+  - {x: 6, y: 10}
