@@ -13,8 +13,7 @@ public enum ItemType
 public enum ConsumableType
 {
     Health,
-    Bomb
-    
+    Bomb  
 }
 
 [System.Serializable]

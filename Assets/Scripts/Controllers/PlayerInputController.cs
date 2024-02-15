@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
+public interface IInteractable
+{
+    string GetInteractPrompt();
+    void OnInteract();
+}
+
 public class PlayerInputController : TopDownCharacterController
 {
     private Camera _camera;
+    private float maxInteractDistance = 0.5f;
+    private LayerMask layerMask;
+
     protected override void Awake()
     {
         base.Awake();
@@ -38,5 +48,24 @@ public class PlayerInputController : TopDownCharacterController
     {
         IsAttacking = value.isPressed;
     }
+    public void OnInteract(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Debug.Log("아이템 획득" + value.ToString());
+            // Raycast 수행
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, _camera.transform.forward, maxInteractDistance, layerMask);
 
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.rigidbody);
+                // 아이템과 상호작용
+                ItemObj item = hit.collider.gameObject.GetComponent<ItemObj>();
+                if (item != null)
+                {
+                    item.OnInteract();
+                }
+            }
+        }
+    }
 }

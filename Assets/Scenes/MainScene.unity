@@ -1294,7 +1294,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &564667568
 GameObject:
@@ -2026,7 +2026,6 @@ MonoBehaviour:
   hpGaugeSlider: {fileID: 1330435691}
   gameOverUI: {fileID: 1088499729}
   level: 0
-  kill: 0
   exp: 0
   nextExp: 03000000050000000a0000006400000096000000d20000001801000068010000c201000058020000
 --- !u!4 &717022675
@@ -3810,6 +3809,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1750367655593514792, guid: 91a69ece1b81458439b017c6aba31f0d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4932218997095179742, guid: 91a69ece1b81458439b017c6aba31f0d, type: 3}
       propertyPath: m_Name
       value: Item_Bomb
