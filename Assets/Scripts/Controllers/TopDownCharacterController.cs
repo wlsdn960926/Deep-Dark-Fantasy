@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class TopDownCharacterController : MonoBehaviour
@@ -11,10 +12,12 @@ public class TopDownCharacterController : MonoBehaviour
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action<AttackSO> OnAttackEvent;
+    public event Action<InputAction> OnInteractionEvent;
     
 
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
+    protected bool IsInteraction { get; set; }
 
     protected CharacterStatsHandler Stats { get; private set; }
 
@@ -57,4 +60,5 @@ public class TopDownCharacterController : MonoBehaviour
     {
         OnAttackEvent?.Invoke(attackSO);
     }
+
 }
