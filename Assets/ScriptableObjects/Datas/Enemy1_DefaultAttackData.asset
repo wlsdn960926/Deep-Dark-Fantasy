@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 1
   delay: 0.15
-  power: 5
+  power: 10
   speed: 3
   target:
     serializedVersion: 2
     m_Bits: 64
-  isKnockBack: 0
+  isOnKnockBack: 0
   knockbackPower: 0
   knockbackTime: 0

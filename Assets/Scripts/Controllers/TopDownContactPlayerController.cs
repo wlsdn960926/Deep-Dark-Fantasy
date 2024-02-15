@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TopDownContactPlayerController : TopDownCharacterController
 {
-    [SerializeField][Range(0f, 100f)] private float nothing;
+    [SerializeField][Range(0f, 100f)] private float maxHealth;
     [SerializeField] private string targetTag = "Enemy";
     private bool _isCollidingWithTarget;
 
@@ -32,7 +32,7 @@ public class TopDownContactPlayerController : TopDownCharacterController
 
     private void OnDamage()
     {
-        nothing = 100f;
+        maxHealth -= 1.0f;
     }
 
 
