@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     public int exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
 
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     private void Awake()
     {
         instance = this;
@@ -42,6 +47,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         gameOverUI.SetActive(true);
+        Time.timeScale = 0;
     }
 
 
