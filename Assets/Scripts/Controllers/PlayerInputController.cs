@@ -7,6 +7,12 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PlayerInputController : TopDownCharacterController
 {
     private Camera _camera;
+
+    private bool _isDodging = false;
+    private float _dodgeSpeed = 5f;
+    private float _dodgeDuration = 0.5f;
+    private float _dodgeCooldown = 3f;
+    private Coroutine _dodgeCoroutine;
     protected override void Awake()
     {
         base.Awake();
@@ -39,4 +45,34 @@ public class PlayerInputController : TopDownCharacterController
         IsAttacking = value.isPressed;
     }
 
+    public void OnDodge(InputValue value)
+    {
+        if (value.isPressed && !_isDodging)
+        {
+            _isDodging = true;
+            _dodgeCoroutine = StartCoroutine(DodgeCoroutine());
+        }
+    }
+
+    IEnumerator DodgeCoroutine()
+    {
+        float timer = 0f;
+        Vector2 dodgeDirection = GetDodgeDirection();
+
+        while (timer < _dodgeDuration)
+        {
+            transform.Translate(dodgeDirection * _dodgeSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(_dodgeCooldown);
+        _isDodging = false;
+    }
+
+    private Vector2 GetDodgeDirection()
+    {
+        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        return moveInput.normalized;
+    }
 }
