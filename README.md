@@ -41,5 +41,5 @@
 - Exit 버튼(메뉴로 나가기)
 #### 시연영상
 
-[![Alt text](https://youtu.be/S6o42Z4mGaw)]
+[![Alt text](https://img.youtu.be/vi/S6o42Z4mGaw.jpg)](https://www.youtube.com/watch?v=S6o42Z4mGaw)
 
