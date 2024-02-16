@@ -20,6 +20,9 @@ public class PlayerInputController : TopDownCharacterController
     private float _dodgeDuration = 0.5f;
     private float _dodgeCooldown = 3f;
     private Coroutine _dodgeCoroutine;
+    public LayerMask layerMask;
+    public float maxCheckDistance;
+
     protected override void Awake()
     {
         base.Awake();
@@ -89,7 +92,7 @@ public class PlayerInputController : TopDownCharacterController
         {
             Debug.Log("아이템 획득" + value.ToString());
             // Raycast 수행
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, _camera.transform.forward, maxInteractDistance, layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, _camera.transform.forward, maxCheckDistance, layerMask);
               if (hit.collider != null)
             {
                 Debug.Log(hit.rigidbody);
