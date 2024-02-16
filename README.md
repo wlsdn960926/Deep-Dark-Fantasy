@@ -40,5 +40,4 @@
 - Next Stage 버튼(다음 스테이지 시작)
 - Exit 버튼(메뉴로 나가기)
 #### 시연영상
-https://www.youtube.com/watch?v=S6o42Z4mGaw
-<a href='https://ifh.cc/v-HmYBZh' target='_blank'><img src='https://ifh.cc/g/HmYBZh.png' border='0'></a>
+[![Alt text](https://img.youtube.com/vi/S6o42Z4mGaw/0.jpg)](https://www.youtube.com/watch?v=S6o42Z4mGaw)
