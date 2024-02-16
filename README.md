@@ -41,5 +41,4 @@
 - Exit 버튼(메뉴로 나가기)
 #### 시연영상
 https://www.youtube.com/watch?v=S6o42Z4mGaw
-
-
+<a href='https://ifh.cc/v-HmYBZh' target='_blank'><img src='https://ifh.cc/g/HmYBZh.png' border='0'></a>
