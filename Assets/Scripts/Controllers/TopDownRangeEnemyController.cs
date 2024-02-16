@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TopDownRangeEnemyContreoller : TopDownEnemyController
 {
-    [SerializeField] private float followRange = 10f; // µû¶ó°¨
-    [SerializeField] private float shootRange = 7f;  // °ø°Ý
+    [SerializeField] private float followRange = 10f; // ï¿½ï¿½ï¿½ï¿½
+    [SerializeField] private float shootRange = 7f;  // ï¿½ï¿½ï¿½ï¿½
 
     protected override void FixedUpdate()
     {
@@ -15,14 +15,14 @@ public class TopDownRangeEnemyContreoller : TopDownEnemyController
         Vector2 direction = DirectionToTarget();
 
         IsAttacking = false;
-        if (distance <= followRange)  //º¸½º°¡ ¾È¿òÁ÷ÀÌ¸é¼­ ½î¸é Á¶Á¤ÇÊ¿ä
+        if (distance <= followRange)  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È¿ï¿½ï¿½ï¿½ï¿½Ì¸é¼­ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
         {
             if (distance <= shootRange)
             {
-                int layerMaskTarget = Stats.CurrentStates.attackSO.target;
+                int layerMaskTarget = Stats.CurrentStats.attackSO.target;
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 11f, (1 << LayerMask.NameToLayer("Level")) | layerMaskTarget);
 
-                if (hit.collider != null && layerMaskTarget == (layerMaskTarget | (1 << hit.collider.gameObject.layer)))  //¸·Èù ÁöÇüÀÖ´ÂÁö Ã¼Å© º¸½º¸Ê¿¡¾øÀ¸¸é Á¦°Å°¡´É
+                if (hit.collider != null && layerMaskTarget == (layerMaskTarget | (1 << hit.collider.gameObject.layer)))  //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ Ã¼Å© ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½
                 {
                     CallLookEvent(direction);
                     CallMoveEvent(Vector2.zero);

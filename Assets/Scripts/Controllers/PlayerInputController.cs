@@ -22,6 +22,7 @@ public class PlayerInputController : TopDownCharacterController
     private Coroutine _dodgeCoroutine;
     public LayerMask layerMask;
     public float maxCheckDistance;
+    private Vector2 _lastLookDirection;
 
     protected override void Awake()
     {
@@ -47,6 +48,7 @@ public class PlayerInputController : TopDownCharacterController
         // Vector ���� �Ǽ��� ��ȯ
         {
             CallLookEvent(newAim);
+            _lastLookDirection = newAim;
         }
     }
 
@@ -90,9 +92,10 @@ public class PlayerInputController : TopDownCharacterController
     {
         if (value.isPressed)
         {
+            Vector2 raycastDirection = _lastLookDirection;
             Debug.Log("아이템 획득" + value.ToString());
             // Raycast 수행
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, _camera.transform.forward, maxCheckDistance, layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, raycastDirection, maxCheckDistance, layerMask);
               if (hit.collider != null)
             {
                 Debug.Log(hit.rigidbody);
