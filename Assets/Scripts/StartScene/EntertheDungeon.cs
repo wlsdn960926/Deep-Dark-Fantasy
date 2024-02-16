@@ -24,5 +24,6 @@ public class EntertheDungeon : MonoBehaviour
     public void ExitGame()
     {
         SceneManager.LoadScene("StartScene");
+        Time.timeScale = 1.0f;
     }
 }
