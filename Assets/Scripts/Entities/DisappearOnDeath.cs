@@ -6,12 +6,14 @@ public class DisappearOnDeath : MonoBehaviour
 {
     private HealthSystem _healthSystem;
     private Rigidbody2D _rigidbody;
+    public GameObject BossSlain;
 
     private void Start()
     {
         _healthSystem = GetComponent<HealthSystem>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _healthSystem.OnDeath += OnDeath;
+        BossSlain.SetActive(false);
     }
 
     void OnDeath()
@@ -31,5 +33,6 @@ public class DisappearOnDeath : MonoBehaviour
         }
 
         Destroy(gameObject, 2f);
+        BossSlain.SetActive(true);
     }
 }
