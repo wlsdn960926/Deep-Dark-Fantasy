@@ -1,8 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+
+public interface IInteractable
+{
+    string GetInteractPrompt();
+    void OnInteract();
+}
 
 public class PlayerInputController : TopDownCharacterController
 {
@@ -13,6 +20,9 @@ public class PlayerInputController : TopDownCharacterController
     private float _dodgeDuration = 0.5f;
     private float _dodgeCooldown = 3f;
     private Coroutine _dodgeCoroutine;
+    public LayerMask layerMask;
+    public float maxCheckDistance;
+
     protected override void Awake()
     {
         base.Awake();
@@ -44,7 +54,7 @@ public class PlayerInputController : TopDownCharacterController
     {
         IsAttacking = value.isPressed;
     }
-
+    
     public void OnDodge(InputValue value)
     {
         if (value.isPressed && !_isDodging)
@@ -75,4 +85,25 @@ public class PlayerInputController : TopDownCharacterController
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         return moveInput.normalized;
     }
+
+    public void OnInteract(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Debug.Log("아이템 획득" + value.ToString());
+            // Raycast 수행
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, _camera.transform.forward, maxCheckDistance, layerMask);
+              if (hit.collider != null)
+            {
+                Debug.Log(hit.rigidbody);
+                // 아이템과 상호작용
+                ItemObj item = hit.collider.gameObject.GetComponent<ItemObj>();
+                if (item != null)
+                {
+                    item.OnInteract();
+                }
+            }
+        }
+    }
+
 }
