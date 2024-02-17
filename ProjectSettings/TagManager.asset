@@ -9,6 +9,7 @@ TagManager:
   - frontTilemap
   - collisionTilemap
   - groundTilemap
+  - Boss
   layers:
   - Default
   - TransparentFX

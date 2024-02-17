@@ -8,7 +8,12 @@ public class BossHPSlider : MonoBehaviour
     public HealthSystem bossHealthSystem; // Reference to the boss's HealthSystem component
     public Slider slider; // Reference to the slider UI element
 
-    private void Start()
+	private void Awake()
+	{        
+        slider = GameObject.Find("Slider").GetComponent<Slider>();
+	}
+
+	private void Start()
     {
         // Ensure that both references are set
         if (bossHealthSystem == null || slider == null)

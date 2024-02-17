@@ -8,7 +8,12 @@ public class DisappearOnDeath : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public GameObject BossSlain;
 
-    private void Start()
+	private void Awake()
+	{
+        BossSlain = GameObject.Find("BossSlain");
+	}
+
+	private void Start()
     {
         _healthSystem = GetComponent<HealthSystem>();
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -32,7 +37,16 @@ public class DisappearOnDeath : MonoBehaviour
             component.enabled = false;
         }
 
-        Destroy(gameObject, 2f);
-        BossSlain.SetActive(true);
+        
+		if (gameObject.CompareTag("Boss"))
+		{
+            Destroy(gameObject, 2f);
+            BossSlain.SetActive(true);
+        }
+		else
+		{
+            Destroy(gameObject, 2f);
+        }
+        
     }
 }
